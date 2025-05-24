@@ -27,10 +27,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if (Test-Path "requirements.txt") 
-      {pip install -r requirements.txt}
-python<version> -mflake8
-        
+        if (Test-Path "requirements.txt") {
+    pip install -r requirements.txt
+}
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
